@@ -2053,6 +2053,7 @@ body{
         html,
         body {
           font-size: 14px;
+          overflow: scroll;
         }
         .home-btn{
                 top: 15px;
@@ -2072,6 +2073,38 @@ body{
         .right-nav{
                 right: 0 !important;
                 font-size: 1.5rem !important;
+        }
+        .text-input{
+                width: 74% !important;
+        }
+        ._1ceqH ._1dpop {
+                width: 3rem !important;
+                height: 3rem !important;
+        }
+        ._1ceqH ._3bC73 ._1YOWG{
+                bottom: 32% !important;
+        }
+        ._1ceqH ._f2DT8 *{
+                font-size: 3rem;
+        }
+        ._1ceqH ._3bC73 ._1dpop img {
+                width: 1.75rem !important;
+                height: 1.75rem !important;
+        }
+        ._1ceqH ._1Yplu ._1Pz2d{
+                padding: 5px 10px !important;
+        }
+        audio{
+                width: 175px !important;
+                height: 30px !important;
+                position: relative !important;
+                right: 10% !important;
+        }
+        .note-txt{
+                width: 80% !important;
+        }
+        .summary-block{
+                width: 90% !important;
         }
       };
   

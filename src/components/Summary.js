@@ -23,7 +23,7 @@ export class Summary extends Component {
 
   componentDidMount() {
     this.setState({loading: true});
-    fetch("https://3e7a4b8f1aa9.ngrok.io/quiz/getAnswers?userId=User3")
+    fetch("https://9748a68492b7.ngrok.io/quiz/getAnswers?userId=User3")
       .then(res => res.json())
       .then(
         (result) => {

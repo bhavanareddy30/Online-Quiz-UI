@@ -58,7 +58,7 @@ export class Record extends Component {
         processData: false,
         contentType: false
       };
-      fetch('https://3e7a4b8f1aa9.ngrok.io/quiz/saveAnswers', requestOptions)
+      fetch('https://9748a68492b7.ngrok.io/quiz/saveAnswers', requestOptions)
         .then((response) => response.blob())
         .then(data => {
           // this.nextQuestion();
@@ -119,6 +119,7 @@ export class Record extends Component {
       recognition.continuous = true;
       recognition.start();
       recognition.onresult = function(event) {
+        console.log('hi')
         var current = event.resultIndex;
         var transcript = event.results[current][0].transcript;
         var mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
@@ -129,11 +130,11 @@ export class Record extends Component {
         }
       };
       recognition.onstart = function() { 
-
+        console.log('started')
       }
       
       recognition.onspeechend = function() {
-
+        console.log('ended')
       }
       
     }
@@ -159,7 +160,7 @@ export class Record extends Component {
                   onClick={() => this.prevQuestion()}><span className='fa fa-chevron-circle-left' style={{color:'white'}}/></div>
            <div style={{position: 'absolute', right: '25%', top: '50%', fontSize: '2.25rem'}} className='nav-btn right-nav' 
                   onClick={() => this.nextQuestion()}><span className='fa fa-chevron-circle-right' style={{color:'white'}}/> </div>
-            <div style={{ margin: '3% auto 0% auto',width: '60%', textAlign: 'left'}}>
+            <div style={{ margin: '3% auto 0% auto',width: '60%', textAlign: 'left'}} className='note-txt'>
               <div style={{fontSize: '0.9rem', padding: '5px 0px'}}><span style={{fontWeight: 'bold', fontStyle: 'italic', color: 'darkred'}}>For Submission: </span>Please click on the stop button, make sure you review your answer and then proceed to next question. If not, your answer will not be submitted!</div>
               <div style={{fontSize: '0.9rem', padding: '5px 0px'}}> <span style={{fontWeight: 'bold', fontStyle: 'italic', color: 'darkred'}}>For Re-recording: </span> To re-record your answer, you can clear your answer using clear button and then proceed.</div>
              </div>

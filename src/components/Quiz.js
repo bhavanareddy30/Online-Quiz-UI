@@ -10,7 +10,7 @@ import learn from '../learn.svg';
 class Quiz extends Component {
   componentDidMount() {
     this.props.store.setLoader(true);
-    fetch("https://3e7a4b8f1aa9.ngrok.io/quiz/questions")
+    fetch("https://9748a68492b7.ngrok.io/quiz/questions")
       .then(res => res.json())
       .then(
         (result) => {
